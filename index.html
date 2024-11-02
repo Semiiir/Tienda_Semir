@@ -6,7 +6,6 @@
     <title>INNOVATECH</title>
     <style>
         /* Estilos generales */
-
         body {
             font-family: 'Arial', sans-serif;
             margin: 0;
@@ -16,45 +15,54 @@
             overflow-x: hidden;
             background-color: rgb(78, 78, 78);
         }
-
         /* Encabezado */
         header {
             background-color: #34495e;
             padding: 40px 20px;
             text-align: center;
         }
-
         header h1 {
             margin: 0;
             font-size: 3em;
             color: white;
         }
-
         header p {
             margin-top: 10px;
             font-size: 1.2em;
             color: white;
         }
-
         /* Navegación */
         nav {
             background-color: #34495e;
             padding: 15px 20px;
             text-align: center;
+            display: flex;
+            justify-content: center;
+            gap: 32px;
+            align-items: center;
         }
-
-        nav a {
+        nav a, nav span {
             color: #ecf0f1;
-            margin: 0 15px;
             text-decoration: none;
             font-size: 1em;
             transition: color 0.3s;
         }
-
         nav a:hover {
             color: #1abc9c;
         }
-
+        .container-cart {
+            color: white;
+        }
+        .button-cart {
+            background-color: #1abc9c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1em;
+            transition: background-color 0.3s;
+        }
         /* Contenedor principal */
         .container {
             display: flex;
@@ -64,7 +72,6 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-
         .image {
             width: 300px;
             height: auto;
@@ -132,7 +139,6 @@
         .item button:hover {
             background-color: #16a085;
         }
-
        
         footer {
             background-color: #2c3e50;
@@ -162,146 +168,19 @@
     <!-- Encabezado -->
     <header>
         <h1>INNOVATECH</h1>
-	<img src="https://static.vecteezy.com/system/resources/previews/002/271/346/large_2x/online-shop-logo-images-free-vector.jpg" alt="imagen" class="image">
+        <img src="https://static.vecteezy.com/system/resources/previews/002/271/346/large_2x/online-shop-logo-images-free-vector.jpg" alt="imagen" class="image">
         <p>Compra los mejores productos al mejor precio.</p>
     </header>
-
-    <!-- Navegación -->
-    <nav>
-        <a href="#">Inicio</a>
-        <a href="#">Productos</a>
-        <a href="#">Contacto</a>
-        <span id="carrito">Carrito: 0 items</span>
-    </nav>
-
-    <!-- Contenedor principal -->
-    <main class="container">
-        <!-- Producto 1 -->
-        <div class="item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH1_ln9m3k2-OKlPhytHn_jaqVNN8aX40CEQ&s" alt="iPhone 15 negro">
-            <h3>iPhone 15   $(3.000.000)</h3>
-            <p>Los mejores productos con la mejor calidad</p>
-            <select>
-                <option>128</option>
-                <option>512(Agotado)</option>
-            </select>
-            <button id="add-to-cart-1" data-name="Iphone 15" data-price="3.000.000">AÑADIR AL CARRITO</button>
-        </div>
-
-        <!-- Producto 2 -->
-        <div class="item">
-            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/116/601/products/archivo_0201-d6b8d783241370a4d616376936011549-240-0.jpeg" alt="iPhone 11 blanco">
-            <h3>iPhone 11 $(1.000.000)</h3>
-            <p>Los mejores productos con la mejor calidad</p>
-            <select>
-                <option>128GB</option>
-                <option>64GB</option>
-            </select>
-             <button id="add-to-cart-1" data-name="Iphone 11" data-price="1.000.000">AÑADIR AL CARRITO</button>
-        </div>
-
-     <!-- Producto 3 -->
-        <div class="item">
-            <img src="https://th.bing.com/th/id/OIP.Z_NZPqL6iqT1LsHlwwolcQHaHa?rs=1&pid=ImgDetMain.jpeg" alt="Camara samsung">
-            <h3>Camara Samsumg $(600.000)</h3>
-            <p>Los mejores productos con la mejor calidad</p>
-            <select>
-                <option>512GB</option>
-                <option>1T</option>
-            </select>
-            <button id="add-to-cart-1" data-name="Camara Samsung" data-price="600.000">AÑADIR AL CARRITO</button>
-        </div>
-
-		
-     <!-- Producto 4 -->
-        <div class="item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwwyUy5BF7QsbU5Zsnxi98PZH5D27C3ze7xw&s" 
-            <h3> Aple watch </h3>
-
-	<h3> Apple watch  $(2.000.000)<h3/>
-	
-            <p>Los mejores productos con la mejor calidad</p>
-      
-            </select>
-            <button id="add-to-cart-1" data-name="Apple watch" data-price="2.000.000">AÑADIR AL CARRITO</button>
-        </div>
-        
-
- <!-- Producto 5 -->
-        <div class="item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRKuhsARlsnF3gfQNFh49lgEqiYFHkiXO4qQ&s"
-            <h3> MacBook pro </h3>
-	
-	<h3>MacBook $(3.000.000)</h3>
-            <p>Los mejores productos con la mejor calidad</p>
-		<select>
-                <option>NEGRO</option>
-                <option>GRIS</option>
-            </select>
-             <button id="add-to-cart-1" data-name="MackBook" data-price="3.000.000">AÑADIR AL CARRITO</button>
-        </div>
  
-<!-- Producto 6 -->
-        <div class="item">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROouMsdSH0XNKR7PvN7d7gzfRGoBeJUtmy_A&s"
-            <h3>Silla Gamer negra reclinable </h3>
-	
-	<h3>Silla Gamer $(500.000)</h3>
-            <p>Los mejores productos con la mejor calidad</p>
-                
-            </select>
-            <button id="add-to-cart-1" data-name="Silla gamer" data-price="500.000">AÑADIR AL CARRITO</button>
-        </div>
 
+   
+       
+     
 
-<!-- Producto 7 -->
-        <div class="item">
-            <img src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaCO/133067857_01/w=1500,h=1500,fit=pad"
-            <h3>Apple vision pro </h3>
-	
-	<h3>Apple vision pro $(25.000.000)</h3>
-            <p>Los mejores productos con la mejor calidad</p>
-                
-            </select>
- 	<button id="add-to-cart-1" data-name="Apple vision pro" data-price="25.000.000">AÑADIR AL CARRITO</button>
-        </div>
+       
+
   
-<!-- Producto 8 -->
-        <div class="item">
-            <img src="https://unnotekno.com/wp-content/uploads/2022/03/PW5111BK_-_Web_1000_x_1000_1000x1000.webp"
-            <h3>Cargador Inalambrico  </h3>
+     
+
+    
 	
-	<h3> Cargador Inalambrico $(200.000)</h3>
-            <p>Los mejores productos con la mejor calidad</p>
-                
-            </select>
-            <button id="add-to-cart-1" data-name="Apple vision pro" data-price="200,000">AÑADIR AL CARRITO</button>
-        </div>
-
-
-    </main>
-
-<script>
-    const cart = [];
-
-    document.querySelectorAll('button').forEach(button => {
-        button.addEventListener('click', () => {
-            const name = button.getAttribute('data-name');
-            const price = parseFloat(button.getAttribute('data-price'));
-            cart.push({ name, price });
-            alert(`${name} ha sido añadido al carrito.`);
-            actualizarCarrito();
-        });
-    });
-
-    function actualizarCarrito() {
-        const carritoElement = document.getElementById('carrito');
-        carritoElement.textContent = `Carrito: ${cart.length} items`;
-    }
-</script>
-    <footer>
-        <p>&copy; 2024 Tienda Digital Semir R.</p>
-    </footer>
-
-</body>
-</html>
