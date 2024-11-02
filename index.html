@@ -171,7 +171,169 @@
         <img src="https://static.vecteezy.com/system/resources/previews/002/271/346/large_2x/online-shop-logo-images-free-vector.jpg" alt="imagen" class="image">
         <p>Compra los mejores productos al mejor precio.</p>
     </header>
+ <!-- Navegación -->
+    <nav>
+        <a href="#">Inicio</a>
+        <a href="#">Productos</a>
+        <a href="#">Contacto</a>
+        <span id="carrito">Carrito: 0 items</span>
+        <span id="total-precio">Total: $0</span>
+        <button onclick="mostrarCarrito()" class="button-cart">VER CARRITO</button>
+        <!-- Contenedor del carrito donde se mostrarán los productos -->
+        <div id="cart-items" class="container-cart"></div>
+    </nav>
+
+    <!-- Contenedor principal -->
+    <main class="container">
+        <!-- Productos... -->
+         <!-- Producto 1 -->
+        <div class="item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRH1_ln9m3k2-OKlPhytHn_jaqVNN8aX40CEQ&s" alt="iPhone 15 negro">
+            <h3>iPhone 15   $(3.000.000)</h3>
+            <p>Los mejores productos con la mejor calidad</p>
+            <select>
+                <option>128</option>
+                <option>512(Agotado)</option>
+            </select>
+            <button id="add-to-cart-1" data-name="Iphone 15" data-price="3000000">AÑADIR AL CARRITO</button>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="item">
+            <img src="https://d3ugyf2ht6aenh.cloudfront.net/stores/001/116/601/products/archivo_0201-d6b8d783241370a4d616376936011549-240-0.jpeg" alt="iPhone 11 blanco">
+            <h3>iPhone 11 $(1.000.000)</h3>
+            <p>Los mejores productos con la mejor calidad</p>
+            <select>
+                <option>128GB</option>
+                <option>64GB</option>
+            </select>
+            <button id="add-to-cart-1" data-name="Iphone 11" data-price="1000000">AÑADIR AL CARRITO</button>
+        </div>
+
+     <!-- Producto 3 -->
+        <div class="item">
+            <img src="https://th.bing.com/th/id/OIP.Z_NZPqL6iqT1LsHlwwolcQHaHa?rs=1&pid=ImgDetMain.jpeg" alt="Camara samsung">
+            <h3>Camara Samsumg $(600.000)</h3>
+            <p>Los mejores productos con la mejor calidad</p>
+            <select>
+                <option>512GB</option>
+                <option>1T</option>
+            </select>
+            <button id="add-to-cart-1" data-name="Camara Samsung" data-price="600000">AÑADIR AL CARRITO</button>
+        </div>
+
+		
+     <!-- Producto 4 -->
+        <div class="item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwwyUy5BF7QsbU5Zsnxi98PZH5D27C3ze7xw&s" alt="Camara samsung">
+            <h3> Aple watch </h3>
+	        <h3> Apple watch  $(2.000.000)</h3>
+	
+            <p>Los mejores productos con la mejor calidad</p>
+      
+            </select>
+            <button id="add-to-cart-1" data-name="Apple watch" data-price="2000000">AÑADIR AL CARRITO</button>
+        </div>
+        
+
+ <!-- Producto 5 -->
+        <div class="item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQRKuhsARlsnF3gfQNFh49lgEqiYFHkiXO4qQ&s" alt="Camara samsung">
+            <h3> MacBook pro </h3>
+	
+	<h3>MacBook $(3.000.000)</h3>
+            <p>Los mejores productos con la mejor calidad</p>
+		<select>
+                <option>NEGRO</option>
+                <option>GRIS</option>
+            </select>
+             <button id="add-to-cart-1" data-name="MackBook" data-price="3000000">AÑADIR AL CARRITO</button>
+        </div>
  
+<!-- Producto 6 -->
+        <div class="item">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROouMsdSH0XNKR7PvN7d7gzfRGoBeJUtmy_A&s" alt="Camara samsung">
+            <h3>Silla Gamer negra reclinable </h3>
+	
+	<h3>Silla Gamer $(500.000)</h3>
+            <p>Los mejores productos con la mejor calidad</p>
+                
+            </select>
+            <button id="add-to-cart-1" data-name="Silla gamer" data-price="50000$">AÑADIR AL CARRITO</button>
+        </div>
+
+
+<!-- Producto 7 -->
+        <div class="item">
+            <img src="https://imagedelivery.net/4fYuQyy-r8_rpBpcY7lH_A/falabellaCO/133067857_01/w=1500,h=1500,fit=pad" alt="Camara samsung">
+            <h3>Apple vision pro </h3>
+	        <h3>Apple vision pro $(25.000.000$)</h3>
+            <p>Los mejores productos con la mejor calidad</p>
+                
+            </select>
+ 	<button id="add-to-cart-1" data-name="Apple vision pro" data-price="25000000">AÑADIR AL CARRITO</button>
+        </div>
+  
+<!-- Producto 8 -->
+        <div class="item">
+            <img src="https://unnotekno.com/wp-content/uploads/2022/03/PW5111BK_-_Web_1000_x_1000_1000x1000.webp" alt="Camara samsung">
+            <h3>Cargador Inalambrico  </h3>
+	
+	<h3> Cargador Inalambrico $(200.000)</h3>
+            <p>Los mejores productos con la mejor calidad</p>
+                
+            </select>
+            <button id="add-to-cart-1" data-name="Cargador inalambrico" data-price="200000">AÑADIR AL CARRITO</button>
+        </div>
+    </main>
+
+    <!-- Aquí iría el resto del código JavaScript, incluido el script para el carrito -->
+    <script>
+        const cart = [];
+
+        document.querySelectorAll('button[data-name]').forEach(button => {
+            button.addEventListener('click', () => {
+                const name = button.getAttribute('data-name');
+                const price = parseFloat(button.getAttribute('data-price'));
+                
+                if (name && !isNaN(price)) {
+                    cart.push({ name, price });
+                    alert(`${name} ha sido añadido al carrito.`);
+                    actualizarCarrito();
+                } else {
+                    alert("Este producto no tiene la información correcta para añadirlo al carrito.");
+                }
+            });
+        });
+
+        function actualizarCarrito() {
+            const carritoElement = document.getElementById('carrito');
+            const totalPrecioElement = document.getElementById('total-precio');
+            const totalItems = cart.length;
+            const totalPrice = cart.reduce((total, item) => total + item.price, 0);
+
+            carritoElement.textContent = `Carrito: ${totalItems} items`;
+            totalPrecioElement.textContent = `Total: $${totalPrice.toLocaleString()}`;
+        }
+
+        function mostrarCarrito() {
+            const cartItemsContainer = document.getElementById('cart-items');
+            cartItemsContainer.innerHTML = '';
+
+            if (cart.length === 0) {
+                cartItemsContainer.textContent = 'El carrito está vacío.';
+            } else {
+                cart.forEach(item => {
+                    const itemElement = document.createElement('div');
+                    itemElement.textContent = `${item.name} - $${item.price.toLocaleString()}`;
+                    cartItemsContainer.appendChild(itemElement);
+                });
+            }
+        }
+    </script>
+</body>
+</html>
+
 
    
        
