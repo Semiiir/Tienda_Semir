@@ -292,6 +292,13 @@
             alert(`${name} ha sido añadido al carrito.`);
             actualizarCarrito();
         });
+    });
+
+    function actualizarCarrito() {
+        const carritoElement = document.getElementById('carrito');
+        carritoElement.textContent = `Carrito: ${cart.length} items`;
+    }
+</script>
     <footer>
         <p>&copy; 2024 Tienda Digital Semir R.</p>
     </footer>
