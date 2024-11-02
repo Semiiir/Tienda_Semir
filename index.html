@@ -185,7 +185,7 @@
                 <option>128</option>
                 <option>512(Agotado)</option>
             </select>
-            <button>AÑADIR AL CARRITO</button>
+            <button id="add-to-cart-1" data-name="Iphone 15" data-price="3.000.000">AÑADIR AL CARRITO</button>
         </div>
 
         <!-- Producto 2 -->
@@ -197,7 +197,7 @@
                 <option>128GB</option>
                 <option>64GB</option>
             </select>
-            <button>AÑADIR AL CARRITO</button>
+             <button id="add-to-cart-1" data-name="Iphone 11" data-price="1.000.000">AÑADIR AL CARRITO</button>
         </div>
 
      <!-- Producto 3 -->
@@ -209,7 +209,7 @@
                 <option>512GB</option>
                 <option>1T</option>
             </select>
-            <button>AÑADIR AL CARRITO</button>
+            <button id="add-to-cart-1" data-name="Camara Samsung" data-price="600.000">AÑADIR AL CARRITO</button>
         </div>
 
 		
@@ -223,7 +223,7 @@
             <p>Los mejores productos con la mejor calidad</p>
       
             </select>
-            <button>AÑADIR AL CARRITO</button>
+            <button id="add-to-cart-1" data-name="Apple watch" data-price="2.000.000">AÑADIR AL CARRITO</button>
         </div>
         
 
@@ -238,7 +238,7 @@
                 <option>NEGRO</option>
                 <option>GRIS</option>
             </select>
-            <button>AÑADIR AL CARRITO</button>
+             <button id="add-to-cart-1" data-name="MackBook" data-price="3.000.000">AÑADIR AL CARRITO</button>
         </div>
  
 <!-- Producto 6 -->
@@ -250,7 +250,7 @@
             <p>Los mejores productos con la mejor calidad</p>
                 
             </select>
-            <button>AÑADIR AL CARRITO</button>
+            <button id="add-to-cart-1" data-name="Silla gamer" data-price="500.000">AÑADIR AL CARRITO</button>
         </div>
 
 
@@ -263,7 +263,7 @@
             <p>Los mejores productos con la mejor calidad</p>
                 
             </select>
-            <button>AÑADIR AL CARRITO</button>
+ 	<button id="add-to-cart-1" data-name="Apple vision pro" data-price="25.000.000">AÑADIR AL CARRITO</button>
         </div>
   
 <!-- Producto 8 -->
@@ -275,13 +275,23 @@
             <p>Los mejores productos con la mejor calidad</p>
                 
             </select>
-            <button>AÑADIR AL CARRITO</button>
+            <button id="add-to-cart-1" data-name="Apple vision pro" data-price="200,000">AÑADIR AL CARRITO</button>
         </div>
 
 
     </main>
 
+<script>
+    const cart = [];
 
+    document.querySelectorAll('button').forEach(button => {
+        button.addEventListener('click', () => {
+            const name = button.getAttribute('data-name');
+            const price = parseFloat(button.getAttribute('data-price'));
+            cart.push({ name, price });
+            alert(`${name} ha sido añadido al carrito.`);
+            actualizarCarrito();
+        });
     <footer>
         <p>&copy; 2024 Tienda Digital Semir R.</p>
     </footer>
